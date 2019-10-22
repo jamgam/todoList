@@ -3,23 +3,22 @@ import Columns from './Columns';
 import styled from 'styled-components';
 
 const FlexDiv = styled.div`
-  display: flex;
-  flex-diretion: row;
-  justify-content: space-evenly;
-  align-items: stretch;
-  flex-grow: 1;
-  background-color: #ECEEEE;
-  height: 100%;
-  width: 100%;
+display: flex;
+flex-diretion: row;
+justify-content: space-evenly;
+align-items: stretch;
+flex-grow: 1;
+background-color: #ECEEEE;
+height: 100%;
+width: 100%;
 `
 
 const App = (props) => {
-  const { text } = props;
   
-  const [column0, setColumn0] = useState(['task', 'task2', 'task3', 'task4']);
-  const [column1, setColumn1] = useState(['task', 'task2']);
-  const [column2, setColumn2] = useState(['task', 'task2']);
-  const [column3, setColumn3] = useState(['task', 'task2']);
+  const [column0, setColumn0] = useState(['task', 'task', 'task', 'task']);
+  const [column1, setColumn1] = useState(['task', 'task']);
+  const [column2, setColumn2] = useState(['task', 'task']);
+  const [column3, setColumn3] = useState(['task', 'task']);
   const columns = [column0, column1, column2, column3];
   const setColumns = [setColumn0, setColumn1, setColumn2, setColumn3];
 

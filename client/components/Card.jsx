@@ -1,4 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const FlexDiv = styled.div`
+display: flex;
+justify-content: space-between;
+width: 100%;
+`
 
 const Card = (props) => {
   const { text, columnIndex, cardIndex, moveCards } = props;
@@ -10,18 +17,17 @@ const Card = (props) => {
   const moveRight = (e) => {
     moveCards(columnIndex, cardIndex, 'right')
   }
+
   return (
-    <div>
-      {columnIndex === 0 ? null :
-        <button onClick={moveLeft}>
+    <FlexDiv>
+      <button disabled={columnIndex === 0} onClick={moveLeft}>
         left
-      </button>}
-      {text}
-      {columnIndex === 3 ? null :
-        <button onClick={moveRight}>
+      </button>
+        {text}
+      <button disabled={columnIndex === 3} onClick={moveRight}>
         right
-      </button>}
-    </div>
+      </button>
+    </FlexDiv>
   )
 }
 

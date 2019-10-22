@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from './Card';
 import styled from 'styled-components';
 
@@ -16,13 +16,13 @@ height: 30px;
 background-color: ${props => props.color};
 display: flex;
 width: 100%;
+justify-content: center;
+align-content: center;
 `
-
 
 const Column = (props) => {
 
   const { cards, title, color, first, last, setCards, index, moveCards } = props;
-
 
   const handleClick = (e) => {
     let task = window.prompt();
